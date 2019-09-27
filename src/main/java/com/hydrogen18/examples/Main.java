@@ -13,14 +13,12 @@ import org.apache.parquet.hadoop.ParquetWriter;
 
 // Avro->Parquet dependencies
 import org.apache.parquet.avro.AvroSchemaConverter;
-import org.apache.parquet.avro.AvroWriteSupport;
 import org.apache.parquet.avro.AvroParquetWriter;
 
 public final class Main {
   public static void main(String[] args){
     Schema avroSchema = UserRank.getClassSchema();
-    MessageType parquetSchema = new AvroSchemaConverter().convert(avroSchema);
-    AvroWriteSupport writeSupport = new AvroWriteSupport(parquetSchema, avroSchema);
+    MessageType parquetSchema = new AvroSchemaConverter().convert(avroSchema);    
     
     UserRank dataToWrite[] = new UserRank[]{
       new UserRank(1, 3),
