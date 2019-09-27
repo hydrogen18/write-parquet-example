@@ -1,0 +1,5 @@
+target/
+src/main/java/com/hydrogen18/examples/UserRank.java
+*.*~
+example.parquet
+.example.parquet.crc

@@ -1,0 +1,9 @@
+{
+"type": "record",
+"namespace": "com.hydrogen18.examples",
+"name": "UserRank",
+"fields": [
+  { "name": "userId", "type": "int" },
+  { "name": "rank", "type": "int" }
+]
+}
